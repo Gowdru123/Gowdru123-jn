@@ -42,12 +42,12 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('📡 𝐌𝐗 𝐏𝐋𝐀𝐘𝐄𝐑 𝐌𝐎𝐕𝐈𝐄 📡', url=f'https://telegram.me/+tU8INwk_RbRlYWM1')
+            InlineKeyboardButton('✅ 𝐀𝐥𝐥 𝐦𝐨𝐯𝐢𝐞𝐬 ✅', url=f'https://t.me/+D7L-rX9lKA43MGRl')
             ],[
             InlineKeyboardButton('💎 𝐆𝐑𝐎𝐔𝐏', url='https://telegram.me/+jTvy1mvA_cphZTZl'),
             InlineKeyboardButton('📺 𝐔𝐏𝐃𝐀𝐓𝐄𝐒', url='https://telegram.me/ROCKERSBACKUP')
             ],[
-            InlineKeyboardButton('📌 𝐓𝐇𝐄𝐀𝐓𝐄𝐑 𝐏𝐑𝐈𝐍𝐓 𝐌𝐎𝐕𝐈𝐄 📌', url=f'https://telegram.me/+InXKPyUl8R02YTBl')
+            InlineKeyboardButton('🔥𝐚𝐝𝐮𝐥𝐭 𝐜𝐡𝐚𝐧𝐧𝐞𝐥🔥', url=f'https://t.me/+LC3GZ8HoeM0zMmZl')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -87,12 +87,12 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('📡 𝐌𝐗 𝐏𝐋𝐀𝐘𝐄𝐑 𝐌𝐎𝐕𝐈𝐄 📡', url=f'https://telegram.me/+tU8INwk_RbRlYWM1')
+            InlineKeyboardButton('✅ 𝐀𝐥𝐥 𝐦𝐨𝐯𝐢𝐞𝐬 ✅', url=f'https://t.me/+D7L-rX9lKA43MGRl')
             ],[
             InlineKeyboardButton('💎 𝐆𝐑𝐎𝐔𝐏', url='https://telegram.me/+jTvy1mvA_cphZTZl'),
             InlineKeyboardButton('📺 𝐔𝐏𝐃𝐀𝐓𝐄𝐒', url='https:/telegram.me/ROCKERSBACKUP')
             ],[
-            InlineKeyboardButton('📌 𝐓𝐇𝐄𝐀𝐓𝐄𝐑 𝐏𝐑𝐈𝐍𝐓 𝐌𝐎𝐕𝐈𝐄 📌', url='https://telegram.me/+InXKPyUl8R02YTBl')
+            InlineKeyboardButton('🔥𝐚𝐝𝐮𝐥𝐭 𝐜𝐡𝐚𝐧𝐧𝐞𝐥🔥', url='https://t.me/+LC3GZ8HoeM0zMmZl')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
