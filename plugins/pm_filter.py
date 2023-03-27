@@ -603,35 +603,35 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if settings is not None:
             buttons = [
                 [
-                    InlineKeyboardButton('📓FILTER BUTTON',
+                    InlineKeyboardButton('💬FILTER BUTTON',
                                          callback_data=f'setgs#button#{settings["button"]}#{str(grp_id)}'),
                     InlineKeyboardButton('SINGLE ✅' if settings["button"] else 'DOUBLE',
                                          callback_data=f'setgs#button#{settings["button"]}#{str(grp_id)}')
                 ],
                 [
-                    InlineKeyboardButton('📲 BOT PM', callback_data=f'setgs#botpm#{settings["botpm"]}#{str(grp_id)}'),
+                    InlineKeyboardButton('📤 BOT PM', callback_data=f'setgs#botpm#{settings["botpm"]}#{str(grp_id)}'),
                     InlineKeyboardButton('YES ✅' if settings["botpm"] else '❌ NO',
                                          callback_data=f'setgs#botpm#{settings["botpm"]}#{str(grp_id)}')
                 ],
                 [
-                    InlineKeyboardButton('🔐 FILE SECURE',
+                    InlineKeyboardButton('🛠 FILE SECURE',
                                          callback_data=f'setgs#file_secure#{settings["file_secure"]}#{str(grp_id)}'),
                     InlineKeyboardButton('YES ✅' if settings["file_secure"] else '❌ NO',
                                          callback_data=f'setgs#file_secure#{settings["file_secure"]}#{str(grp_id)}')
                 ],
                 [
-                    InlineKeyboardButton('📒 IMDB', callback_data=f'setgs#imdb#{settings["imdb"]}#{str(grp_id)}'),
+                    InlineKeyboardButton('📺 IMDB', callback_data=f'setgs#imdb#{settings["imdb"]}#{str(grp_id)}'),
                     InlineKeyboardButton('YES ✅' if settings["imdb"] else '❌ NO',
                                          callback_data=f'setgs#imdb#{settings["imdb"]}#{str(grp_id)}')
                 ],
                 [
-                    InlineKeyboardButton('📮 SPELL CHECK',
+                    InlineKeyboardButton('⌨ SPELL CHECK',
                                          callback_data=f'setgs#spell_check#{settings["spell_check"]}#{str(grp_id)}'),
                     InlineKeyboardButton('YES ✅' if settings["spell_check"] else '❌ NO',
                                          callback_data=f'setgs#spell_check#{settings["spell_check"]}#{str(grp_id)}')
                 ],
                 [
-                    InlineKeyboardButton('🎉 WELCOME ', callback_data=f'setgs#welcome#{settings["welcome"]}#{str(grp_id)}'),
+                    InlineKeyboardButton('🎷 WELCOME ', callback_data=f'setgs#welcome#{settings["welcome"]}#{str(grp_id)}'),
                     InlineKeyboardButton('YES ✅' if settings["welcome"] else '❌ NO',
                                          callback_data=f'setgs#welcome#{settings["welcome"]}#{str(grp_id)}')
                 ]
@@ -743,7 +743,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐌𝐎𝐕𝐈𝐄 ➢ {search} </b>\n<i><b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐆𝐑𝐎𝐔𝐏 ➢ {message.chat.title} </i></b>\n<i><b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐏𝐄𝐑𝐒𝐎𝐍 ➢ {message.from_user.mention}\n</i></b>\n©️@jnaneshgowdatn"
+        cap = f"<b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐌𝐎𝐕𝐈𝐄 ➢ {search} </b>\n<i><b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐆𝐑𝐎𝐔𝐏 ➢ {message.chat.title} </i></b>\n<i><b>𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐏𝐄𝐑𝐒𝐎𝐍 ➢ {message.from_user.mention}\n</i></b>\n©️@ROCKERSBACKUP"
     if imdb and imdb.get('poster'):
         try:
             hehe =  await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -781,7 +781,7 @@ async def advantage_spell_chok(msg):
     gs_parsed = []
     if not g_s:
         k = await msg.reply(' ⚠ Error, No Results❗check spelling ')
-        await asyncio.sleep(8)
+        await asyncio.sleep(10)
         await k.delete()
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
@@ -809,8 +809,8 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply('<b><i> No Results found </i></b> \n\n<i><b>do like this to get ur movie </i></b> \n <b><i>go to Google and check spelling › [</i></b><a href="http://www.google.com"><b><i>✒Click Here✒</i></b></a><b><i>]</i></b>')
-        await asyncio.sleep(8)
+        k = await msg.reply('<b>📝 No Results Found 📝</i></b> \n\n<i><b>📌𝐑𝐄𝐀𝐒𝐎𝐍</i></b>\n\n<i><b>only type movie</i></b>\n\n<i><b>example ➢ kranti</i></b>\n<i><b>🖌𝐍𝐨𝐭 𝐫𝐞𝐥𝐞𝐚𝐬𝐞𝐝 𝐦𝐨𝐯𝐢𝐞</i></b>\n<i><b>🖌𝐀𝐝𝐦𝐢𝐧 𝐧𝐨𝐭 𝐚𝐝𝐝𝐞𝐝 𝐦𝐨𝐯𝐢𝐞</i></b>\n\n<i><b>💎 please go to Google 💎 </i></b> \n<b><i>💎 Check Spelling 💎› [</i></b><a href="http://www.google.com"><b><i>✒Click Here✒</i></b></a><b><i>]</i></b>')
+        await asyncio.sleep(10)
         await k.delete()
         return
     SPELL_CHECK[msg.id] = movielist
